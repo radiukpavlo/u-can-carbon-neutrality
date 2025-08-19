@@ -1,52 +1,53 @@
 # U_CAN: Ukraine towards Carbon Neutrality — Interactive Presentation
 
-An interactive, single-page presentation that showcases a data-driven approach to reducing urban traffic emissions using adaptive clustering and AI-driven signal control. Optimized for 1280×720 viewing with keyboard navigation, figure placeholders, and a clean, accessible layout.
+A single-page, data-driven slide deck on reducing urban traffic emissions with adaptive clustering and AI-driven signal control. Designed for 1280×720 displays with accessible, keyboard-first navigation.
 
-## Live Demo
+## Live Slides
 
-- GitHub Pages (recommended)
-  https://radiukpavlo.github.io/my-study-python/blob/main/%5B00%5D_papers/68_curves/urban-traffic-deck/index.html
+- GitHub Pages (primary)
+  https://radiukpavlo.github.io/u-can-carbon-neutrality/
 
-- Direct Preview (no Pages setup required)
-  https://htmlpreview.github.io/?https://github.com/radiukpavlo/my-study-python/blob/main/%5B00%5D_papers/68_curves/urban-traffic-deck/index.html
+- RawGitHack (mirror)
+  https://raw.githack.com/radiukpavlo/u-can-carbon-neutrality/refs/heads/main/index.html
 
-- Alternative (RawGitHack)
-  https://raw.githack.com/radiukpavlo/my-study-python/main/%5B00%5D_papers/68_curves/urban-traffic-deck/index.html
+- HTMLPreview (fallback)
+  https://htmlpreview.github.io/?https://github.com/radiukpavlo/u-can-carbon-neutrality/refs/heads/main/index.html
 
-If a link returns 404, give it a minute after pushing changes, then refresh.
+If a link shows 404 immediately after an update, wait a minute for caching to complete and refresh.
 
-## How to Use
+## Usage
 
-- Navigate: Space / Right / Down → next slide; Left / Up → previous slide
-- Jump: Home → first slide; End → last slide
-- Overview: press “O” to open a slide index overlay for quick jumping
-- The slide counter and a clickable progress bar help with pacing and Q&A
+- Next slide: Space / Right / Down
+- Previous slide: Left / Up
+- Jump to start/end: Home / End
+- Overview: O (opens slide index)
+- A slide counter and clickable progress bar support pacing and Q&A
 
 ## View Locally
 
-- Simply open `index.html` in your browser
-- Optional: serve locally for consistent asset loading (any static server works)
+- Open `index.html` directly in a browser, or
+- Serve the folder with any static HTTP server for consistent asset loading
 
-## Deploying to GitHub Pages
+## Publish to GitHub Pages
 
-1) In your repository, go to Settings → Pages  
-2) Under “Build and deployment,” set Source to “Deploy from a branch”  
-3) Select branch: `main`, folder: `/ (root)`, then Save  
-4) Wait for deployment to complete (a few minutes), then use the Pages URL above
+1) Go to Repository Settings → Pages  
+2) Build and deployment → Source: “Deploy from a branch”  
+3) Branch: `main`, Folder: `/ (root)` → Save  
+4) After deployment completes, access:  
+   https://radiukpavlo.github.io/u-can-carbon-neutrality/
 
 ## Troubleshooting
 
-- Blank page or missing assets: hard-refresh (Ctrl/Cmd+Shift+R) to clear caches
-- 404 on GitHub Pages: confirm Pages is enabled for `main` and the index file is at repo root
-- Slow loads: external CDNs may be rate-limited; try again or use the RawGitHack link
+- Blank page or missing assets: hard refresh (Ctrl/Cmd+Shift+R)
+- 404 on GitHub Pages: ensure Pages is enabled for `main` and `index.html` is at the repository root
+- Slow loads: try the RawGitHack mirror above
 
-## Summary
+## At a Glance
 
-This deck presents:
-- The problem context and motivation
-- Method 1: Adaptive Cascade Clustering (HDBSCAN + k-means)
-- Method 2: DRL-based traffic signal control
+- Problem context and motivation
+- Adaptive cascade clustering for mobility data
+- DRL-based traffic signal control
 - Experimental setup and realistic scenarios
 - Results and roadmap for pilot deployment
 
-Feedback and contributions are welcome.
+Feedback and collaboration are welcome.
