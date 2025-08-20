@@ -28,13 +28,7 @@ def save_as_pdf(html_file, pdf_file):
         'landscape': False,
         'displayHeaderFooter': False,
         'printBackground': True,
-        'preferCSSPageSize': False,
-        'paperWidth': 13.33,
-        'paperHeight': 7.5,
-        'marginTop': 0,
-        'marginBottom': 0,
-        'marginLeft': 0,
-        'marginRight': 0,
+        'preferCSSPageSize': True,  # Use the @page size from your CSS
     }
 
     result = driver.execute_cdp_cmd("Page.printToPDF", print_options)
