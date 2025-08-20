@@ -581,6 +581,55 @@
             color: #2C3E50;
         }
     </style>
+    <style>
+        /* Typography and UI scaling overrides for improved readability */
+        .title-slide .main-title { font-size: 56px; }
+        .title-slide .subtitle { font-size: 28px; }
+        .title-slide .approach-title { font-size: 20px; }
+        .title-slide .approach-content { font-size: 16px; }
+        .title-slide .footer { font-size: 18px; }
+
+        .header .title { font-size: 36px; }
+        .section-title { font-size: 22px; }
+        .point-icon { font-size: 16px; }
+        .point-text { font-size: 18px; }
+
+        .figure-title { font-size: 16px; }
+        .figure-caption { font-size: 14px; }
+
+        .custom-table { font-size: 15px; }
+        .custom-table th { font-size: 15px; }
+        .custom-table td { font-size: 14px; }
+
+        .stat-number { font-size: 28px; }
+        .stat-text { font-size: 16px; }
+
+        .info-box-title { font-size: 20px; }
+        .info-box-desc { font-size: 16px; }
+
+        .chart-container { height: 240px; }
+
+        .contact-card .name { font-size: 20px; }
+        .author-list-item { font-size: 18px; }
+        .author-list-item i { font-size: 12px; }
+        .institution-name { font-size: 18px; }
+        .institution-icon { font-size: 28px; }
+        .contact-info { font-size: 18px; }
+        .contact-info i { font-size: 18px; }
+
+        .slide-number { font-size: 14px; }
+        .slide-takeaway { font-size: 16px; }
+
+        .slide-indicator { font-size: 16px; }
+        .nav-instructions { font-size: 14px; }
+
+        .overview-index { font-size: 14px; }
+        .overview-title { font-size: 16px; }
+        /* Slide 1 specific title positioning and sizing */
+        #slide1 .main-title { font-size: 64px; line-height: 1.05; transform: translateY(180px); }
+        #slide1 .subtitle { font-size: 32px; transform: translateY(150px); }
+        #slide1 .approach-container { margin-top: 120px; }
+    </style>
 </head>
 
 <body>
@@ -671,10 +720,10 @@
                 </div>
                 <div class="right-column">
                     <!-- Figure 1: Temporal Distribution - Developers can adjust these CSS custom properties -->
-                    <div class="figure-placeholder" style="--container-width: 100%; --container-height: 500px;"
+                    <div class="figure-placeholder" style="--container-width: 100%; --container-height: 400px;"
                         data-figure-id="fig1" data-figure-name="Temporal Distribution">
                         <img src="images/figure_pavlyshyn_8.png" alt="Temporal distribution of traffic patterns throughout the day (non-overlapping clusters)"
-                            style="--img-width: 600px; --img-height: 500px;">
+                            style="--img-width: 600px; --img-height: 400px;">
                         <div class="figure-title">Figure: Temporal Distribution of Traffic Patterns</div>
                         <div class="figure-caption">Daily pattern shifts highlight the need for adaptive, context-aware signal strategies.</div>
                     </div>
@@ -708,22 +757,11 @@
                             informed initialization to refine the cluster boundaries, improving compactness.
                         </p>
                     </div>
-                    <div class="section">
-                        <h2 class="section-title"><i class="fas fa-balance-scale"></i>Weighted Voting Mechanism</h2>
-                        <div class="point"><i class="fas fa-circle point-icon"></i>
-                            <div class="point-text">Automatically selects the optimal clustering result (HDBSCAN,
-                                k-means, or hybrid) based on data characteristics like noise and density.</div>
-                        </div>
-                        <div class="point"><i class="fas fa-circle point-icon"></i>
-                            <div class="point-text">Evaluates results using a composite score of quality metrics (e.g.,
-                                V-measure, Silhouette Score, stability), ensuring robustness and adaptability.</div>
-                        </div>
-                    </div>
                     <!-- Figure 2: System Architecture - Developers can adjust these CSS custom properties -->
-                    <div class="figure-placeholder" style="--container-width: 100%; --container-height: 300px;"
+                    <div class="figure-placeholder" style="--container-width: 100%; --container-height: 400px;"
                         data-figure-id="fig2" data-figure-name="System Architecture">
                         <img src="images/figure_pavlyshyn_1.png" alt="Adaptive Cascade Clustering Architecture"
-                            style="--img-width: 500px; --img-height: 300px;">
+                            style="--img-width: 500px; --img-height: 400px;">
                         <div class="figure-title">Figure: System Architecture</div>
                         <!-- <div class="figure-caption">SUGGESTION: Replace with **Figure 1 from Pavlyshyn et al.**, which shows the proposed adaptive cascade clustering architecture from data acquisition to final output.</div> -->
                     </div>
@@ -769,6 +807,19 @@
                             </tbody>
                         </table>
                     </div>
+
+                    <div class="section">
+                        <h2 class="section-title"><i class="fas fa-balance-scale"></i>Weighted Voting Mechanism</h2>
+                        <div class="point"><i class="fas fa-circle point-icon"></i>
+                            <div class="point-text">Automatically selects the optimal clustering result (HDBSCAN,
+                                k-means, or hybrid) based on data characteristics like noise and density.</div>
+                        </div>
+                        <div class="point"><i class="fas fa-circle point-icon"></i>
+                            <div class="point-text">Evaluates results using a composite score of quality metrics (e.g.,
+                                V-measure, Silhouette Score, stability), ensuring robustness and adaptability.</div>
+                        </div>
+                    </div>
+
                     <div class="section">
                         <h2 class="section-title"><i class="fas fa-shield-alt"></i>Robustness to Noise (ARI Drop at 35%
                             Noise)</h2>
@@ -819,11 +870,11 @@
                         </div>
                     </div>
                     <!-- Figure 3: AI Control System - Developers can adjust these CSS custom properties -->
-                    <div class="figure-placeholder" style="--container-width: 100%; --container-height: 350px;"
+                    <div class="figure-placeholder" style="--container-width: 100%; --container-height: 380px;"
                         data-figure-id="fig3" data-figure-name="AI Control System">
-                        <img src="images/figure_ryzhanskyi_1.png" alt="AI Control System Overview"
-                            style="--img-width: 500px; --img-height: 350px;">
-                        <div class="figure-title">Figure: AI Control System Overview</div>
+                        <img src="images/figure_ryzhanskyi_1.png" alt="AI Control Processing"
+                            style="--img-width: 500px; --img-height: 380px;">
+                        <div class="figure-title">Figure: AI Control Processing</div>
                         <!-- <div class="figure-caption">SUGGESTION: Replace with **Figure 1 from Ryzhanskyi et al.**, which provides a high-level schematic of the AI control approach, from data input to traffic control settings.</div> -->
                     </div>
                 </div>
@@ -894,11 +945,11 @@
                 </div>
                 <div class="right-column">
                     <!-- Figure 4: Transport Network - Developers can adjust these CSS custom properties -->
-                    <div class="figure-placeholder" style="--container-width: 100%; --container-height: 400px;"
+                    <div class="figure-placeholder" style="--container-width: 100%; --container-height: 330px;"
                         data-figure-id="fig4" data-figure-name="Transport Network">
                         <!-- <i class="fas fa-project-diagram fa-3x" style="color: #7D7D7D; margin-bottom: 15px;"></i> -->
-                        <img src="images/figure_network.png" alt="Khmelnytskyi Transport Network"
-                            style="--img-width: 500px; --img-height: 400px;">
+                        <img src="images/figure_network.png" alt="Scheme of Transport Network"
+                            style="--img-width: 500px; --img-height: 500px;">
                         <div class="figure-title">Figure: Scheme of Transport Network</div>
                         <!-- <div class="figure-caption">SUGGESTION: Create a schematic representation of the Khmelnytskyi network based on the description in Pavlyshyn et al. to visually represent the simulation area.</div> -->
                     </div>
@@ -953,10 +1004,10 @@
                         </div>
                     </div>
                     <!-- Figure 5: Clustering Metrics - Developers can adjust these CSS custom properties -->
-                    <div class="figure-placeholder" style="--container-width: 100%; --container-height: 350px;"
+                    <div class="figure-placeholder" style="--container-width: 100%; --container-height: 300px;"
                         data-figure-id="fig5" data-figure-name="Clustering Metrics">
                         <img src="images/figure_pavlyshyn_6.png" alt="Comparison of Clustering Metrics"
-                            style="--img-width: 500px; --img-height: 350px;">
+                            style="--img-width: 500px; --img-height: 300px;">
                         <div class="figure-title">Figure: Clustering Quality Metrics Comparison</div>
                         <!-- <div class="figure-caption">SUGGESTION: Replace with **Figure 6 from Pavlyshyn et al.**, a bar chart that clearly highlights the trade-offs and strengths of different clustering algorithms.</div> -->
                     </div>
@@ -1072,17 +1123,17 @@
                                 <tr>
                                     <td><b>Phase 1</b></td>
                                     <td>Algorithm Refinement & Pilot Data Integration</td>
-                                    <td>12 Months</td>
+                                    <td>6 Months</td>
                                 </tr>
                                 <tr>
                                     <td><b>Phase 2</b></td>
-                                    <td>Pilot Deployment in Khmelnytskyi & Kyiv</td>
-                                    <td>18 Months</td>
+                                    <td>Pilot Deployment in Khmelnytskyi</td>
+                                    <td>9 Months</td>
                                 </tr>
                                 <tr>
                                     <td><b>Phase 3</b></td>
-                                    <td>National Scaling & Policy Integration</td>
-                                    <td>36 Months</td>
+                                    <td>(In Plan) National Scaling & Policy Integration</td>
+                                    <td>12 Months</td>
                                 </tr>
                             </tbody>
                         </table>
@@ -1156,11 +1207,11 @@
                         </div>
                     </div>
                     <!-- Figure 7: University Logo - Developers can adjust these CSS custom properties -->
-                    <div class="figure-placeholder" style="--container-width: 100%; --container-height: 350px;"
+                    <div class="figure-placeholder" style="--container-width: 100%; --container-height: 300px;"
                         data-figure-id="fig7" data-figure-name="University Logo">
                         <div class="image-container">
                             <img src="images/figure_khmnu.png" alt="Khmelnytskyi National University"
-                                style="--img-width: 500px; --img-height: 350px;">
+                                style="--img-width: 500px; --img-height: 300px;">
                         </div>
                         <div class="figure-title">Khmelnytskyi National University, Khmelnytskyi, Ukraine</div>
                         <!-- <div class="figure-caption">Khmelnytskyi National University, Khmelnytskyi, Ukraine</div> -->
@@ -1343,33 +1394,6 @@
         });
     </script>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Chart for Slide 4
-            const ctx4 = document.getElementById('co2ReductionLearningChart');
-            if (ctx4) {
-                new Chart(ctx4.getContext('2d'), {
-                    type: 'line',
-                    data: {
-                        labels: [0, 20, 40, 60, 80, 100W],
-                        datasets: [{
-                            label: 'CO₂ Emissions (Normalized)',
-                            data: [1.0, 0.95, 0.88, 0.84, 0.82, 0.82],
-                            borderColor: '#1B9E77',
-                            backgroundColor: 'rgba(27, 158, 119, 0.1)',
-                            fill: true,
-                            tension: 0.1
-                        }]
-                    },
-                    options: {
-                        responsive: true, maintainAspectRatio: false,
-                        plugins: { title: { display: true, text: 'CO₂ Reduction Over Learning Cycles', font: { size: 16, weight: 'bold' } } },
-                        scales: { y: { beginAtZero: false, title: { display: true, text: 'Emission Level' } } }
-                    }
-                });
-            }
-        });
-    </script>
 </body>
 
 </html>
