@@ -41,6 +41,9 @@ If a link shows 404 immediately after an update, wait a minute for caching to co
 - Blank page or missing assets: hard refresh (Ctrl/Cmd+Shift+R)
 - 404 on GitHub Pages: ensure Pages is enabled for `main` and `index.html` is at the repository root
 - Slow loads: try the RawGitHack mirror above
+- **Selenium PDF error ("DevToolsActivePort file doesn't exist"):**  
+  If you run the PDF generator as root (e.g., in some Docker or CI environments), Chrome may fail to start unless you add the `--no-sandbox` flag.  
+  **Solution:** In `generate_pdf.py`, add `chrome_options.add_argument("--no-sandbox")` before launching Chrome.
 
 ## At a Glance
 

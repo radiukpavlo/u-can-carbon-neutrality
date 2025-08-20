@@ -637,6 +637,64 @@
         #slide1 .subtitle { font-size: 32px; transform: translateY(150px); }
         #slide1 .approach-container { margin-top: 120px; }
     </style>
+    <!-- ================================================================== -->
+    <!-- ==== PASTE THIS ENTIRE STYLE BLOCK FOR PDF EXPORT ================ -->
+    <!-- ================================================================== -->
+    <style>
+        @media print {
+            /* 1. Define the PDF page properties */
+            @page {
+                /* This is the most critical rule: set the page size to match your slide dimensions */
+                size: 1280px 720px;
+                /* Remove all printer margins */
+                margin: 0;
+            }
+
+            /* 2. Force background colors and images to print */
+            body {
+                -webkit-print-color-adjust: exact !important; /* For Chrome, Safari */
+                print-color-adjust: exact !important;       /* Standard */
+            }
+
+            /* 3. Hide all non-slide UI elements */
+            .slide-indicator,
+            .nav-instructions,
+            .progress-bar,
+            .overview-overlay {
+                display: none !important;
+            }
+            
+            /* 4. Ensure each slide is treated as a distinct, full page */
+            .slide {
+                /* Make ALL slides visible to the printer, overriding the 'active' class logic */
+                display: block !important;
+                position: relative !important;
+                transform: none !important;
+                opacity: 1 !important;
+                
+                /* Set the slide dimensions to perfectly fill the page */
+                width: 1280px;
+                height: 720px;
+                overflow: hidden; /* Clip any minor overflow */
+                
+                /* Create a page break after each slide */
+                page-break-after: always;
+
+                /* Clean up on-screen styles */
+                box-shadow: none !important;
+                margin: 0 !important;
+            }
+
+            /* 5. Reset the main containers */
+            html, body, .slide-container {
+                position: static !important;
+                width: 1280px;
+                height: auto;
+                overflow: visible !important;
+                background: none !important;
+            }
+        }
+    </style>
 </head>
 
 <body>
